@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 
 @Injectable()
-export default class LessonServiceClient {
+export class LessonServiceClient {
   findAllLessons = () =>
     fetch(`https://webdev1-qizhou-persist.herokuapp.com/api/lessons`)
       .then(response => response.json())

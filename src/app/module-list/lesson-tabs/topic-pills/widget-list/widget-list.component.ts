@@ -2,9 +2,8 @@ import {Component, Inject, OnInit} from '@angular/core';
 import {Topic} from "../../../../models/topic.model.client";
 import {Widget} from "../../../../models/widget.model.client";
 import {ActivatedRoute} from "@angular/router";
-import TopicServiceClient from "../../../../services/TopicServiceClient";
-import WidgetServiceClient from "../../../../services/WidgetServiceClient";
-import ModuleServiceClient from "../../../../services/ModuleServiceClient";
+import { TopicServiceClient } from "../../../../services/TopicServiceClient";
+import { WidgetServiceClient } from "../../../../services/WidgetServiceClient";
 
 @Component({
   selector: 'app-widget-list',

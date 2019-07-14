@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 
 @Injectable()
-export default class WidgetServiceClient {
+export class WidgetServiceClient {
   findAllWidgets = () =>
     fetch(`https://webdev1-qizhou-persist.herokuapp.com/api/widgets`)
       .then(response => response.json())

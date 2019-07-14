@@ -1,7 +1,7 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import CourseServiceClient from "../services/CourseServiceClient";
-import ModuleServiceClient from "../services/ModuleServiceClient";
+import { CourseServiceClient } from "../services/CourseServiceClient";
+import { ModuleServiceClient } from "../services/ModuleServiceClient";
 import { Course } from '../models/course.model.client';
 import { Module } from "../models/module.model.client";
 @Component({

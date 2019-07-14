@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 
 @Injectable()
-export default class TopicServiceClient {
+export class TopicServiceClient {
   findAllTopics = () =>
     fetch(`https://webdev1-qizhou-persist.herokuapp.com/api/topics`)
       .then(response => response.json())

@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 
 @Injectable()
-export default class ModuleServiceClient {
+export class ModuleServiceClient {
   findAllModules = () =>
     fetch(`https://webdev1-qizhou-persist.herokuapp.com/api/modules`)
       .then(response => response.json())

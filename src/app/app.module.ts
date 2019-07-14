@@ -5,12 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CourseGridComponent } from './course-grid/course-grid.component';
 import {FormsModule} from "@angular/forms";
-import CourseServiceClient from "./services/CourseServiceClient";
-import ModuleServiceClient from "./services/ModuleServiceClient";
+import { CourseServiceClient } from "./services/CourseServiceClient";
+import { ModuleServiceClient } from "./services/ModuleServiceClient";
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
-import LessonServiceClient from "./services/LessonServiceClient";
-import TopicServiceClient from "./services/TopicServiceClient";
-import WidgetServiceClient from "./services/WidgetServiceClient";
+import { LessonServiceClient } from "./services/LessonServiceClient";
+import { TopicServiceClient } from "./services/TopicServiceClient";
+import { WidgetServiceClient } from "./services/WidgetServiceClient";
 import {ModuleListModule} from "./module-list/module-list.module";
 @NgModule({
   declarations: [
