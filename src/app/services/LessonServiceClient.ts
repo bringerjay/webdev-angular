@@ -3,13 +3,13 @@ import {Injectable} from '@angular/core';
 @Injectable()
 export default class LessonServiceClient {
   findAllLessons = () =>
-    fetch(`http://localhost:8080/api/lessons`)
+    fetch(`https://webdev1-qizhou-persist.herokuapp.com/api/lessons`)
       .then(response => response.json())
   findLessonsForModule = (mid) =>
-    fetch(`http://localhost:8080/api/modules/`+ mid +`/lessons`)
+    fetch(`https://webdev1-qizhou-persist.herokuapp.com/api/modules/`+ mid +`/lessons`)
       .then(response => response.json())
   findLessonById = (lId) =>
-    fetch("http://localhost:8080/api/lessons/" + lId)
+    fetch("https://webdev1-qizhou-persist.herokuapp.com/api/lessons/" + lId)
       .then(function (response) {
         return response.json()
       })

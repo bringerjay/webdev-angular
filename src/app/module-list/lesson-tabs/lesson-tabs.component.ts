@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {Module} from "../../models/module.model.client";
 import {Lesson} from "../../models/lesson.model.client";
 import {ActivatedRoute, Router} from "@angular/router";
-import ModuleServiceClient from "../../../services/ModuleServiceClient";
-import LessonServiceClient from "../../../services/LessonServiceClient";
+import ModuleServiceClient from "../../services/ModuleServiceClient";
+import LessonServiceClient from "../../services/LessonServiceClient";
 
 @Component({
   selector: 'app-lesson-tabs',

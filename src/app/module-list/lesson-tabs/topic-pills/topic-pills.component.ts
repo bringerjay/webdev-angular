@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {Lesson} from "../../../models/lesson.model.client";
 import {ActivatedRoute, Router} from "@angular/router";
-import LessonServiceClient from "../../../../services/LessonServiceClient";
+import LessonServiceClient from "../../../services/LessonServiceClient";
 import {Topic} from "../../../models/topic.model.client";
-import TopicServiceClient from "../../../../services/TopicServiceClient";
+import TopicServiceClient from "../../../services/TopicServiceClient";
 
 @Component({
   selector: 'app-topic-pills',

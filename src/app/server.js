@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 
 // Serve only the static files form the dist directory
-app.use(express.static('./dist/your_app_name'));
+app.use(express.static('./dist/webdev-angular-qizhou'));
 
 app.get('/*', function(req,res) {
 
