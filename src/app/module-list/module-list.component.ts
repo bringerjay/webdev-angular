@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import CourseServiceClient from "../services/CourseServiceClient";
 import ModuleServiceClient from "../services/ModuleServiceClient";
@@ -15,8 +15,8 @@ export class ModuleListComponent implements OnInit {
   course: Course;
   modules: Module[];
   constructor(private route: ActivatedRoute,
-              private moduleService: ModuleServiceClient,
-              private courseService: CourseServiceClient) { }
+              @Inject(ModuleServiceClient) private moduleService: ModuleServiceClient,
+              @Inject(CourseServiceClient) private courseService: CourseServiceClient) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {

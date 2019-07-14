@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {Topic} from "../../../../models/topic.model.client";
 import {Widget} from "../../../../models/widget.model.client";
 import {ActivatedRoute} from "@angular/router";
 import TopicServiceClient from "../../../../services/TopicServiceClient";
 import WidgetServiceClient from "../../../../services/WidgetServiceClient";
+import ModuleServiceClient from "../../../../services/ModuleServiceClient";
 
 @Component({
   selector: 'app-widget-list',
@@ -19,8 +20,8 @@ export class WidgetListComponent implements OnInit {
   widgets: Widget[];
   constructor(
     private route: ActivatedRoute,
-    private topicService: TopicServiceClient,
-    private widgetService: WidgetServiceClient
+    @Inject(TopicServiceClient) private topicService: TopicServiceClient,
+    @Inject(WidgetServiceClient) private widgetService: WidgetServiceClient
   ) { }
 
   ngOnInit() {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {Module} from "../../models/module.model.client";
 import {Lesson} from "../../models/lesson.model.client";
 import {ActivatedRoute, Router} from "@angular/router";
@@ -17,8 +17,8 @@ export class LessonTabsComponent implements OnInit {
   module: Module;
   lessons: Lesson[];
   constructor(private route: ActivatedRoute,
-              private moduleService: ModuleServiceClient,
-              private lessonService: LessonServiceClient) {
+              @Inject(ModuleServiceClient) private moduleService: ModuleServiceClient,
+              @Inject(LessonServiceClient) private lessonService: LessonServiceClient) {
   }
 
   ngOnInit() {

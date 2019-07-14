@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {Lesson} from "../../../models/lesson.model.client";
 import {ActivatedRoute, Router} from "@angular/router";
 import LessonServiceClient from "../../../services/LessonServiceClient";
 import {Topic} from "../../../models/topic.model.client";
 import TopicServiceClient from "../../../services/TopicServiceClient";
+import ModuleServiceClient from "../../../services/ModuleServiceClient";
 
 @Component({
   selector: 'app-topic-pills',
@@ -18,8 +19,8 @@ export class TopicPillsComponent implements OnInit {
   lesson: Lesson;
   topics: Topic[];
   constructor(private route: ActivatedRoute,
-              private topicService: TopicServiceClient,
-              private lessonService: LessonServiceClient) {
+              @Inject(TopicServiceClient) private topicService: TopicServiceClient,
+              @Inject(LessonServiceClient) private lessonService: LessonServiceClient) {
   }
 
   ngOnInit() {
