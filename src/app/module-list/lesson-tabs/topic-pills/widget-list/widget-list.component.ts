@@ -29,7 +29,7 @@ export class WidgetListComponent implements OnInit {
       this.courseId = params['courseId'];
       this.widgetId = params['widgetId'];
       this.topicId  = params['topicId'];
-      this.topicService.findTopicById(this.moduleId)
+      this.topicService.findTopicById(this.topicId)
         .then( topic => this.topic = topic);
       this.widgetService.findWidgetsForTopic(this.topicId)
         .then(widgets => this.widgets = widgets)
