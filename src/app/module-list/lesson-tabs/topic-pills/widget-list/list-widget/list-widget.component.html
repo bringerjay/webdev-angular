@@ -1,0 +1,19 @@
+<h1>{{widget.name}}</h1>
+<h2>widget ID {{widget.id}}</h2>
+<h3>{{widget.type}} Widget</h3>
+<div [ngSwitch]="widget.list">
+  <div *ngSwitchCase="'ul'">
+  <ul  *ngFor="let line of widget.ltext">
+    <li>
+    {{line}}
+    </li>
+  </ul>
+  </div>
+  <div *ngSwitchCase="'ol'">
+    <ol *ngFor="let line of widget.ltext">
+    <li>
+      {{line}}
+    </li>
+    </ol>
+  </div>
+</div>

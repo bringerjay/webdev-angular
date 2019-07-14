@@ -1,0 +1,65 @@
+.nav-item{
+  margin-top: 30px
+}
+.modified{
+  margin-left: 5px
+}
+.form-control{
+  width: 25rem;
+  margin-top: 30px;
+  margin-right: 15px
+}
+.navbar-brand{
+  margin-left: 15px;
+  height: 80px   ;
+  margin-top: 25px
+}
+.title-col{
+  margin-left: 120px
+}
+.ownership{
+
+}
+.nav-btn{
+  margin-top: 30px;
+  height: 50%;
+  margin-right: 15px
+}
+
+.modified{
+
+}
+.table-header{
+  background: greenyellow;
+  height: 70px;
+  font-max-size: x-large;
+}
+.course-list{
+  margin-left: 50px;
+  margin-right: 50px;
+  background: white;
+  height: 600px;
+}
+body{
+  background: lightgrey;
+}
+.courseGrid{
+  marginTop: 10rem;
+}
+.course-actions{
+  margin-left: auto;
+  margin-right: 15px;
+}
+.add{
+  margin-left: 10px;
+  margin-right: 10px;
+  color: red;
+}
+.card{
+  width: 18rem;
+  bottom-margin: 10px;
+}
+.update-icon{
+  margin-right: 10px;
+  color: #61dafb;
+}

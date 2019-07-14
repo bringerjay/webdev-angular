@@ -1,0 +1,20 @@
+<ul class="nav nav-pills">
+  <li class="nav-item"
+      *ngFor="let lesson of lessons"
+      [ngClass]="{'active':
+       lesson.id === selectedLessonId}"
+      (click)="highlight(lesson.id)">
+    <a routerLink="{{lesson.id}}/topic" class="nav-link">
+      {{lesson.title}}</a>
+  </li>
+  <li class="list-group-item">
+    <input class="form-control"/>
+  </li>
+  <li>
+    <button class="btn btn-primary btn-block">
+      Search Lesson
+    </button>
+  </li>
+</ul>
+<router-outlet></router-outlet>
+

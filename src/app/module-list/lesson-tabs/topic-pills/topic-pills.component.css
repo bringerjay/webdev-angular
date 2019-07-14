@@ -1,0 +1,6 @@
+.nav-item.active{
+  z-index: 2;
+  color: white;
+  background-color: #00a8ff;
+  boarder-color: #00a8ff;
+}

@@ -1,0 +1,32 @@
+<div class="container">
+  <h1>Widget List {{widgets.length}}</h1>
+  <br/><br/><br/>
+  <div class="row"
+       *ngFor="let widget of widgets"
+       [ngSwitch]="widget.type">
+    <div class="card col-lg-8 col-md-8 col-sm-8">
+      <div class="card-body">
+        <app-heading-widget
+        *ngSwitchCase="'Heading'"
+        [widget]="widget">
+        </app-heading-widget>
+        <app-image-widget
+          *ngSwitchCase="'Image'"
+          [widget]="widget">
+        </app-image-widget>
+        <app-link-widget
+          *ngSwitchCase="'Link'"
+          [widget]="widget">
+        </app-link-widget>
+        <app-paragraph-widget
+          *ngSwitchCase="'Paragraph'"
+          [widget]="widget">
+        </app-paragraph-widget>
+        <app-list-widget
+        *ngSwitchCase="'List'"
+        [widget]="widget">
+        </app-list-widget>
+      </div>
+</div>
+  </div>
+</div>

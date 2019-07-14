@@ -1,0 +1,29 @@
+<div>
+  <nav class="navbar-dark bg-dark">
+    <div class="row">
+    <a class="navbar-brand text-center" href="#"
+    >Course Manager</a>
+    <button type="button" class="nav-btn btn btn-success">List view
+            </button>
+    <input class="form-control"
+           id="search" [(ngModel)]="courseTitle"/>
+    <button type="button" class="nav-btn btn btn-success float-right">Search
+    </button>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="card col-lg-2 col-md-4 col-sm-10"
+           *ngFor="let course of courses">
+        <img class="card-img-top"
+             src="https://picsum.photos/300/200"/>
+        <div class="card-body">
+          <a routerLink="/course/{{course.id}}/module"><h5 class="card-title">
+          {{course.title}}
+        </h5></a>
+          <p class="card-text">Card text for {{course.title}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>

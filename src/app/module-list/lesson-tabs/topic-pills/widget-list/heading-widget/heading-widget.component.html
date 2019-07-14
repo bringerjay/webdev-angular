@@ -1,0 +1,11 @@
+<h1>{{widget.name}}</h1>
+<h2>widget ID {{widget.id}}</h2>
+<h3>{{widget.type}} Widget</h3>
+<div [ngSwitch]="widget.size">
+  <h1 *ngSwitchCase="'h1'"
+  >{{widget.text}}</h1>
+  <h2 *ngSwitchCase="'h2'"
+  >{{widget.text}}</h2>
+  <h3 *ngSwitchCase="'h3'"
+  >{{widget.text}}</h3>
+</div>

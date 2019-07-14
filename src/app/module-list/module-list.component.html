@@ -1,0 +1,33 @@
+<div>
+  <div class="editor-header">
+    <h2>{{course.title}} {{course.id}}</h2>
+    <a routerLink=""><h5>Course Grid</h5></a>
+  </div>
+  <div class="row">
+    <div class="col-4 left">
+      <div class="card module-panel">
+        <h3>Module List</h3>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <input class="form-control"/>
+            <fa name="cog" animation="spin">Add Module</fa>
+          </li>
+        </ul>
+        <ul>
+          <li class="list-group-item"
+              *ngFor="let module of modules"
+              [ngClass]="{'active':
+              module.id === selectedModuleId}"
+              (click)="highlight(module.id)">
+            <a routerLink="{{module.id}}/lesson">
+              {{module.title}}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-8 right">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
